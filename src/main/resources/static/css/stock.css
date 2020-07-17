@@ -1,0 +1,55 @@
+.component-row {
+	padding: 4px 8px 4px 8px;
+	display: flex;
+	text-align: center;
+}
+
+#toastr {
+	position: absolute;
+	min-height: 40px;
+	text-align: center;
+	top: 89%;
+	left: 2%;
+	min-width: 200px;
+	vertical-align: middle;
+	line-height: 35px;
+}
+
+.btn-light {
+	color: #212529;
+	background-color: #f8f9fa;
+	border-color: #f8f9fa;
+}
+
+.label-div {
+	padding: 0 8px 0 0;
+	width: 50%;
+	text-align: right;
+}
+
+.field-div {
+	width: 50%;
+	text-align: left;
+}
+
+#buttonClass {
+	margin: 4px 4px 4px 4px;
+}
+
+body {
+	background: gray;
+}
+
+#main {
+	height: 100%;
+	background: white;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}

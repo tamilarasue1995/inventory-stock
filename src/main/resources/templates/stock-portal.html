@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" style="height:100%;">
+<head>
+<meta charset="ISO-8859-1">
+<title>Stock Management</title>
+<link rel="stylesheet" type="text/css" href="../../css/stock.css"></link>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="../../js/stock-manage.js"></script>
+</head>
+<body style="height:94%;background:darkgray" >
+	<div id="main" style="margin: 16px;">
+		<div style="text-align: right; padding: 8px">
+			<button type="button" id="create-button" class="btn btn-primary" style="margin:1px;">Create</button>
+			<button type="button" id="back-button" class="btn btn-light" style="margin:1px;">Portal</button>
+		</div>
+		<input type="hidden" id="edit-mode" th:value=${mode}>
+		<input type="hidden" id="data-edit" th:value=${data}>
+		<div style="margin-left: 40%;">
+			<div class="input-group mb-3" style="width: 320px;">
+				<div class="input-group-prepend">
+					<span class="input-group-text" style="min-width: 140px"
+						id="basic-addon1">Stock Number *</span>
+				</div>
+				<input type="text" id="stock-number" class="form-control"
+					placeholder="Enter Stock Number">
+			</div>
+
+			<div class="input-group mb-3" style="width: 320px;">
+				<div class="input-group-prepend">
+					<span class="input-group-text" style="min-width: 140px"
+						id="basic-addon2">Stock Name *</span>
+				</div>
+				<input type="text" id="stock-name" class="form-control"
+					placeholder="Enter Stock Name">
+			</div>
+
+			<div class="input-group mb-3" style="width: 320px;">
+				<div class="input-group-prepend">
+					<span class="input-group-text" style="min-width: 140px"
+						id="basic-addon3">Purchase Date *</span>
+				</div>
+				<input type="date" class="form-control" id="stock-purchase-date">
+			</div>
+
+			<div class="input-group mb-3" style="width: 320px;">
+				<div class="input-group-prepend">
+					<span class="input-group-text" style="min-width: 140px"
+						id="basic-addon4">Purchase Price *</span>
+				</div>
+				<input type="text" id="stock-purchase-price" class="form-control"
+					placeholder="Enter Purchase Price">
+			</div>
+
+			<div class="input-group mb-3" id="stock-selling-date-div"
+				style="width: 320px;">
+				<div class="input-group-prepend">
+					<span class="input-group-text" style="min-width: 140px"
+						id="basic-addon5">Selling Date</span>
+				</div>
+				<input type="date" id="stock-selling-date" class="form-control">
+			</div>
+
+			<div class="input-group mb-3" id="stock-selling-price-div"
+				style="width: 320px;">
+				<div class="input-group-prepend">
+					<span class="input-group-text" style="min-width: 140px"
+						id="basic-addon6">Selling Price</span>
+				</div>
+				<input type="text" id="stock-selling-price" class="form-control"
+					placeholder="Enter Selling Price">
+			</div>
+
+			<div class="input-group mb-3" style="width: 320px;">
+				<div class="input-group-prepend">
+					<span class="input-group-text" style="min-width: 140px"
+						id="basic-addon7">Quantity *</span>
+				</div>
+				<input type="text" id="stock-quantity" class="form-control"
+					placeholder="Enter Stock Quantity" aria-label="Username" required="true"
+					aria-describedby="basic-addon7">
+			</div>
+		</div>
+		<div class="toast" id="toastr" data-autohide="true" >
+			<div class="toast-body">Some text inside the toast body</div>
+		</div>
+	</div>
+</body>
+</html>
